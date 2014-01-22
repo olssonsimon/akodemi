@@ -53,6 +53,8 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     diff-lcs (1.2.5)
+    email_validator (1.4.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.2.0)
@@ -169,6 +171,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
+  email_validator
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
   jbuilder (= 1.0.2)
