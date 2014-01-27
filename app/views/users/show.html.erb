@@ -1,0 +1,19 @@
+<% provide(:title, @user.name) %>
+
+<div class="row">
+	<aside class="span3">
+		<section>
+			<%= image_tag @user.avatar.url %> </br>
+			<h3>
+				<%= @user.name %>
+			</h3>
+
+			<%= @user.email %> </br>
+
+			<%= button_to "Ändra profil", edit_user_path(@user), class: 'btn' , style: "margin-top: 10px" %>
+		</section>
+	</aside>
+	<div class="span9">
+		<p>Här kommer det visas en lista av passande jobb.</p>
+	</div>
+</div>

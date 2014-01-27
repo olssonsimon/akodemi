@@ -1,0 +1,17 @@
+<%= f.input :name, label: 'Namn' %>
+
+<%= f.input :email, label: 'Email' %>
+
+<%= f.input :password, label: 'Lösenord' %>
+
+<%= f.input :password_confirmation, label: 'Bekräfta lösenord' %>
+
+<%= f.input :bio, as: :text, label: 'En beskrivning av dig själv' %>
+
+<%= f.label 'Ladda upp en profilbild', style: "margin-left: 0px; margin-bottom: 5px;" %>
+
+<%= f.file_field :avatar %>
+
+<%= f.label 'Ladda upp ditt CV', style: "margin-left: 0px; margin-bottom: 5px;" %>
+
+<%= f.file_field :cv %>

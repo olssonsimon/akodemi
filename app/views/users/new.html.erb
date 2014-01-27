@@ -1,0 +1,14 @@
+<% provide(:title, "Gå med") %>
+
+<h1>Gå med i Akodemi</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= simple_form_for @user do |f| %>
+
+			<%= render 'fields', f: f %>
+			<%= f.button :submit, 'Gå med!', class: "btn btn-large btn-primary" %> 
+
+		<% end %>
+	</div>
+</div>

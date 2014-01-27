@@ -1,9 +1,18 @@
 @import 'bootstrap';
 
+/* Variables and mixins */
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* Hero unit */
 
 #hero {
 	margin-top: -20px;
+	background: white;
 }
 
 #logo {
@@ -24,7 +33,68 @@
 	}
 }
 
+/* Form */
+
+input[type="file"] {
+	line-height: 10px;
+}
+
+.simple_form label {
+	position: relative;
+	float: left;
+	text-align: right;
+	margin: 2px 10px;
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+}
+
+.simple_form textarea {
+	width: 100%;
+}
+
+.simple_form input {
+	width: 100%;
+}
+
+.simple_form .error {
+  clear: left;
+  font-size: 12px;
+  color: #D00;
+  display: block;
+}
+
+.simple_form .hint {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+
+// input, textarea, select, .uneditable-input {
+//   border: 1px solid #bbb;
+//   width: 100%;
+//   margin-bottom: 15px;
+
+//   @include box_sizing;
+// }
+
+// input {
+//   height: auto !important;
+// }
+
 /*  universal */
+
+.row {
+	margin-top: 20px;
+}
+
+label {
+	cursor: default;
+}
 
 html {
 	overflow-y: scroll;
@@ -74,5 +144,23 @@ h2 {
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
+}
+
+/* Sidebar */
+
+aside {
+	section {
+		padding: 10px 0;
+		border-top: 1px solid $grayLight;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		span {
+			display: block;
+			margin-bottom: 3px;
+			line-height: 1;
+		}
+	}
 }
 
