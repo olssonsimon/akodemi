@@ -1,16 +1,30 @@
-<div id="header-shadow">
-	<header>
-		<div class="navbar navbar-fixed-top navbar-inverse">
-			<div class="navbar-inner">
-				<%= link_to "Akodemi", root_url, id: 'logo' %>
+<header>
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<%= link_to "Akodemi", root_url, id: 'logo' %>
+
+			<% if signed_in? %>
+
 				<ul class="nav pull-left">
 					<li><%= link_to "Gå med", signup_path %></li>
 					<li><%= link_to "Alla jobb", '#' %></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li><%= link_to "Logga in", '#' %></li>
+					<li><%= link_to "Logga ut", signout_path %></li>
 				</ul> 
-			</div>
+
+			<% else %>
+
+				<ul class="nav pull-left">
+					<li><%= link_to "Gå med", signup_path %></li>
+					<li><%= link_to "Alla jobb", '#' %></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><%= link_to "Logga in", signin_path %></li>
+				</ul> 
+
+			<% end %>
+
 		</div>
-	</header>
-</div>
+	</div>
+</header>

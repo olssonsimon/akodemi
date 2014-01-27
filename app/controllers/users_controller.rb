@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			# Handle signup success
-			#Sign in the user
+			sign_in @user
 			flash[:success] = "Welcome to Akodemi!"
 			redirect_to @user
 		else
