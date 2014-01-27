@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
+		@user = !params[:id].nil? ? User.find(params[:id]) : current_user
 	end
 
 	def create
@@ -22,6 +22,12 @@ class UsersController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	def destroy
+		User.find(params[:id]).destroy
+		flash[:success] = "User deleted"
+		redirect_to users_url
 	end
 
 	private

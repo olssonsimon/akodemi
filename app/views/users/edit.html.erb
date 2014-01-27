@@ -1,0 +1,6 @@
+<% provide(:title, "Ändra profiluppgifter") %>
+
+<p>Här ska man kunna redigera sin profil</p>
+
+<%= button_to 'Ta bort min profil', current_user, method: :delete, class: "btn btn-danger",
+						data: { confirm: "Är du säker på att du vill ta bort din profil?" } %>
