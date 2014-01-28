@@ -1,17 +1,54 @@
-<%= f.input :name, label: 'Namn' %>
-
-<%= f.input :email, label: 'Email' %>
-
-<%= f.input :password, label: 'Lösenord' %>
-
-<%= f.input :password_confirmation, label: 'Bekräfta lösenord' %>
-
-<%= f.input :bio, as: :text, label: 'En beskrivning av dig själv' %>
-
-<%= f.label 'Ladda upp en profilbild', style: "margin-left: 0px; margin-bottom: 5px;" %>
-
-<%= f.file_field :avatar %>
-
-<%= f.label 'Ladda upp ditt CV', style: "margin-left: 0px; margin-bottom: 5px;" %>
-
-<%= f.file_field :cv %>
+<div class="control-group">
+	<%= f.label 'Namn', class: "control-label", for: "inputName" %>
+	<div class="controls">
+		<%= f.text_field :name, id: "inputName", placeholder: "Ditt namn" %>
+		<span class="help-inline error-inline">
+			<%= @user.errors[:name].first %>
+		</span>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'Email', class: "control-label", for: "inputEmail" %>
+	<div class="controls">
+		<%= f.text_field :email, id: "inputEmail", placeholder: "Din email" %>
+		<span class="help-inline error-inline">
+			<%= @user.errors[:email].first %>
+		</span>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'Lösenord', class: "control-label", for: "inputPassword" %>
+	<div class="controls">
+		<%= f.password_field :password, id: "inputPassword", placeholder: "Ange ett lösenord (minst 6 tecken)" %>
+		<span class="help-inline error-inline">
+			<%= @user.errors[:password].first %>
+		</span>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'Bekräfta lösenord', class: "control-label", for: "inputPasswordConf" %>
+	<div class="controls">
+		<%= f.password_field :password_confirmation, id: "inputPasswordConf", placeholder: "Bekräfta ditt lösenord" %>
+		<span class="help-inline error-inline">
+			<%= @user.errors[:password_confirmation].first %>
+		</span>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'En beskrivning av dig själv', class: "control-label", for: "inputBio" %>
+	<div class="controls">
+		<%= f.text_area :bio, id: "inputBio", placeholder: "En beskrivande text som sammanfattar vem du är och vad du är bra på (max 500 tecken)" %>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'Ladda upp en profilbild', class: "control-label", for: "inputAvatar" %>
+	<div class="controls">
+		<%= f.file_field :avatar, id: "inputAvatar" %>
+	</div>
+</div>
+<div class="control-group">
+	<%= f.label 'Ladda upp ditt CV', class: "control-label", for: "inputCV" %>
+	<div class="controls">
+		<%= f.file_field :cv, id: "inputCV" %>
+	</div>
+</div>

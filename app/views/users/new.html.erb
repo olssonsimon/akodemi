@@ -3,12 +3,12 @@
 <h1>Gå med i Akodemi</h1>
 
 <div class="row">
-	<div class="span6 offset3">
+	<div class="span6 offset2">
 
-		<%= simple_form_for @user do :url => user_path(:id => @user.name) |f| %>
+		<%= form_for @user, html: { class: "form-horizontal" } do |f| %>
 
 			<%= render 'fields', f: f %>
-			<%= f.button :submit, 'Gå med!', class: "btn btn-large btn-primary" %> 
+			<%= f.submit 'Gå med!', class: "btn btn-primary", id: "form-button" %> 
 
 		<% end %>
 	</div>

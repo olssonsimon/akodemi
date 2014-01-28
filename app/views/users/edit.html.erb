@@ -1,6 +1,14 @@
-<% provide(:title, "Ändra profiluppgifter") %>
+<% provide(:title, "Ändra profil") %>
 
-<p>Här ska man kunna redigera sin profil</p>
+<h1>Redigera profil</h1>
 
-<%= button_to 'Ta bort min profil', current_user, method: :delete, class: "btn btn-danger",
-						data: { confirm: "Är du säker på att du vill ta bort din profil?" } %>
+<div class="row">
+	<div class="span8 offset1">
+		<%= form_for current_user, html: { class: "form-horizontal" } do |f| %>
+
+			<%= render 'fields', f: f %>
+			<%= f.submit 'Spara ändringar', class: "btn btn-primary", id: "form-button" %> 
+		<% end %>
+		<%= button_to 'Ta bort min profil', current_user, method: :delete, style: "float: left;" ,class: "btn btn-danger", data: { confirm: "Är du säker på att du vill ta bort din profil?" } %>
+	</div>
+</div>

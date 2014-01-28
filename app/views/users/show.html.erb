@@ -5,12 +5,12 @@
 		<section>
 			<%= image_tag @user.avatar.url %> </br>
 			<h3>
-				<%= @user.name %>
+				<%= current_user.name %>
 			</h3>
 
-			<%= @user.email %> </br>
+			<%= current_user.email %> </br>
 
-			<%= button_to "Ändra profil", edit_user_path(@user), class: 'btn' , style: "margin-top: 10px" %>
+			<%= button_to "Ändra profil", edit_user_path(current_user), method: 'get', class: 'btn' , style: "margin-top: 10px" %>
 		</section>
 	</aside>
 	<div class="span9">
