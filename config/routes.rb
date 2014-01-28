@@ -1,6 +1,7 @@
 Akodemi::Application.routes.draw do
 	resources :users
 	resources :sessions, only: [:new, :create, :destroy]
+	resources :jobs
 
 	root 'static_pages#home'
 	match '/about', 	to: 'static_pages#about', 	via: 'get'

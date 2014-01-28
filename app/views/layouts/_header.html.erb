@@ -7,7 +7,7 @@
 
 				<ul class="nav pull-left">
 					<li><%= link_to "Om", '/about' %></li>
-					<li><%= link_to "Alla jobb", '#' %></li>
+					<li><%= link_to "Alla jobb", jobs_path %></li>
 				</ul>
 				<ul class="nav pull-right">
 					<li><%= link_to "Logga ut", signout_path, method: 'delete' %></li>
@@ -18,7 +18,7 @@
 				<ul class="nav pull-left">
 					<li><%= active_link_to "Om", about_path %></li>
 					<li><%= active_link_to "Gå med", signup_path %></li>
-					<li><%= active_link_to "Alla jobb", '#' %></li>
+					<li><%= active_link_to "Alla jobb", jobs_path %></li>
 				</ul>
 				<ul class="nav pull-right">
 					<li><%= active_link_to "Logga in", signin_path %></li>

@@ -1,0 +1,24 @@
+<% provide(:title, "Alla jobb") %>
+
+<div class="row">
+	<div class="">
+		<table class="table table-striped table-responsive">
+			<thead>
+			<tr>
+				<th>Titel</th>
+				<th>Typ</th>
+				<th>Ort</th>
+				<th>Sista anmälningsdag</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Exempeltitel</td>
+					<td>Extrajobb</td>
+					<td>Göteborg</td>
+					<td><%= Time.now.strftime("%e %b %Y") %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
