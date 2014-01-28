@@ -4,7 +4,8 @@
 
 <div class="row">
 	<div class="span6 offset3">
-		<%= simple_form_for @user do |f| %>
+
+		<%= simple_form_for @user do :url => user_path(:id => @user.name) |f| %>
 
 			<%= render 'fields', f: f %>
 			<%= f.button :submit, 'Gå med!', class: "btn btn-large btn-primary" %> 
