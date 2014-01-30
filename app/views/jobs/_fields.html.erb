@@ -1,0 +1,56 @@
+<div class="control-group">
+	<%= f.label 'Titel', class: "control-label", for: "inputTitle" %>
+	<div class="controls">
+		<%= f.text_field :title, id: "inputTitle", placeholder: "Jobbtitel" %>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:title].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group">
+	<%= f.label 'Typ', class: "control-label", for: "inputType" %>
+	<div class="controls">
+		<%= f.check_box :type, value: "Extrajobb" %><label class="checkbox inline">Extrajobb</label></br>
+		<%= f.check_box :type, value: "Sommarjobb" %><label class="checkbox inline">Sommarjobb</label></br>
+		<%= f.check_box :type, value: "Heltid" %><label class="checkbox inline">Heltid</label></br>
+		<%= f.check_box :type, value: "Deltid" %><label class="checkbox inline">Deltid</label>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:type].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group">
+	<%= f.label 'Ort', class: "control-label", for: "inputCity" %>
+	<div class="controls">
+		<%= f.text_field :city, id: "inputCity", placeholder: "Ort" %>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:ort].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group inline-form">
+	<%= f.label 'Sista anmälningsdag', class: "control-label", for: "inputDate" %>
+	<div class="controls">
+		<div class="inline-form">
+			<%= f.date_select :last_day, order: [:day, :month, :year], start_year: 2013,  id: "inputDate" %>
+		</div>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:date].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group inline-form">
+	<%= f.label 'Beskrivning', class: "control-label", for: "inputDescription" %>
+	<div class="controls">
+		<div class="inline-form">
+			<%= f.text_area :description, id: "inputDescription" %>
+		</div>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:description].first %>
+		</span>
+	</div>
+</div>

@@ -2,23 +2,54 @@
 
 <div class="row">
 	<div class="">
-		<table class="table table-striped table-responsive">
+		<table class="table table-responsive" style="border-collapse:collapse;">
 			<thead>
 			<tr>
 				<th>Titel</th>
 				<th>Typ</th>
 				<th>Ort</th>
-				<th>Sista anmälningsdag</th>
+				<th>Sista dag</th>
+				<th>Beskrivning</th>
 			</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Exempeltitel</td>
+					<td>Systemutvecklare</td>
 					<td>Extrajobb</td>
 					<td>Göteborg</td>
 					<td><%= Time.now.strftime("%e %b %Y") %></td>
+					<td><a data-toggle="collapse" data-target="#demo1" class="accordion-toggle">Visa mer</a></td>
 				</tr>
+
+				<tr>
+		            <td colspan="6" class="hiddenRow box">
+		            	<div class="accordian-body collapse" id="demo1">
+		            		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis felis at odio hendrerit vestibulum. Sed mi mi, ullamcorper euismod urna ut, tempor porttitor nisl. Mauris accumsan nisl id dolor tempus consectetur. Morbi eget tellus elit. Proin tristique orci in accumsan auctor. Curabitur scelerisque lobortis massa quis pharetra. Ut est tellus, lobortis non consectetur in, lobortis ut nibh. Nulla dignissim sem quis dignissim porta. Sed imperdiet cursus interdum. Nulla sed nisl elementum quam vehicula congue eget eu metus. Morbi orci elit, ullamcorper at cursus nec, lacinia a velit. Integer rutrum dolor ut lorem elementum interdum. Nulla fringilla cursus dolor, eu blandit magna aliquam ac.
+		            	</div>
+		            </td>
+		        </tr>
+
+		        <tr>
+					<td>Systemutvecklare</td>
+					<td>Extrajobb</td>
+					<td>Göteborg</td>
+					<td><%= Time.now.strftime("%e %b %Y") %></td>
+					<td><a data-toggle="collapse" data-target="#demo2" class="accordion-toggle">Visa mer</a></td>
+				</tr>
+
+				<tr>
+		            <td colspan="6" class="hiddenRow">
+		            	<div class="box">
+			            	<div class="accordian-body collapse" id="demo2">
+			            		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis felis at odio hendrerit vestibulum. Sed mi mi, ullamcorper euismod urna ut, tempor porttitor nisl. Mauris accumsan nisl id dolor tempus consectetur. Morbi eget tellus elit. Proin tristique orci in accumsan auctor. Curabitur scelerisque lobortis massa quis pharetra. Ut est tellus, lobortis non consectetur in, lobortis ut nibh. Nulla dignissim sem quis dignissim porta. Sed imperdiet cursus interdum. Nulla sed nisl elementum quam vehicula congue eget eu metus. Morbi orci elit, ullamcorper at cursus nec, lacinia a velit. Integer rutrum dolor ut lorem elementum interdum. Nulla fringilla cursus dolor, eu blandit magna aliquam ac.
+			            	</div>
+		            	</div>
+		            </td>
+		        </tr>
+				
 			</tbody>
 		</table>
 	</div>
 </div>
+
+<%= button_to 'Skapa nytt jobb', newjob_path, class: 'btn' , method: 'get' %>
