@@ -1,9 +1,9 @@
-$(".collapse-link").click(function() {
-    if($("#collapseme").hasClass("out")) {
-        $("#collapseme").addClass("in");
-        $("#collapseme").removeClass("out");
+$("a.accordion-toggle").click(function() {
+    if($("#collapse1").hasClass("out")) {
+        $("#collapse1").addClass("well");
+        $("#collapse1").removeClass("out");
     } else {
-        $("#collapseme").addClass("out");
-        $("#collapseme").removeClass("in");
+        $("#collapse1").addClass("out");
+        $("#collapse1").removeClass("well");
     }
 });

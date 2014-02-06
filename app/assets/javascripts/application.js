@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require highlight_li
-//= require collapse-table
+//= require highlight_li.js
+//= require show-hide.js
 //= require bootstrap.js
 //= require_tree .

@@ -148,6 +148,22 @@ aside {
 }
 
 /* Table */
+
+.in {
+	padding: 5px;
+	background: #f1f1f1;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	border-top: none;
+	border-bottom: 1px solid #DDD;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+.out {
+	border: 1px solid $grayLight;
+}
+
 table td {
 	border: none !important;
 }
