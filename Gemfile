@@ -3,7 +3,7 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.2'
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
@@ -13,6 +13,7 @@ gem 'carrierwave'
 gem 'simple_form'
 gem "paperclip", "~> 3.5.3"
 gem "active_link_to"
+gem 'cities'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

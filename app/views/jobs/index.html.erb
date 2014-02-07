@@ -1,0 +1,38 @@
+<% provide(:title, "Alla jobb") %>
+
+<div class="row">
+	<div class="span12">
+		<table class="table table-responsive" style="border-collapse: collapse;">
+			<thead>
+			<tr>
+				<th>Titel</th>
+				<th>Typ</th>
+				<th>Ort</th>
+				<th>Sista dag</th>
+				<th>Beskrivning</th>
+			</tr>
+			</thead>
+			<tbody>
+				<% @jobs.each_with_index do |job, index| %>
+					<tr>
+						<td><%= job.title %></td>
+						<td><%= job.type %></td> <!-- visar bara siffror -->
+						<td><%= job.city %></td>
+						<td><%= job.last_day.strftime("%e %b %Y") %></td>
+						<td><a data-toggle="collapse" data-target="#collapse<%= index %>" class="accordion-toggle">Visa mer</a></td>
+					</tr>
+
+					<tr>
+			            <td colspan="6" class="hiddenRow box">
+			            	<div class="accordian-body collapse" id="collapse<%= index %>">
+			            		<%= job.description %>
+			            	</div>
+			            </td>
+			        </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<%= button_to 'Skapa nytt jobb', newjob_url, class: 'btn' %>

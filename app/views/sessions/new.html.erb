@@ -3,7 +3,7 @@
 <h1>Logga in</h1>
 
 <div class="row">
-	<div class="span6 offset3">
+	<div class="span6 offset2">
 		<%= form_for(:session, url: sessions_path, html: { class: "form-horizontal" }) do |f| %>
 			<div class="control-group">
 				<%= f.label 'Email', class: "control-label", for: "inputEmail" %>
@@ -25,8 +25,10 @@
 					<%= f.submit'Logga in', class: 'btn btn-primary', id: "form-button" %>
 				</div>
 			</div>
-		<% end %>
 
-		<p>Ny på den här sidan? <%= link_to 'Gå med!', signup_path %></p>
+		<% end %>
+		<div class="center">
+			<p>Ny på den här sidan? <%= link_to 'Gå med!', signup_path %></p>
+		</div>
 	</div>
 </div>

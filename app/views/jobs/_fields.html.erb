@@ -1,0 +1,54 @@
+<div class="control-group">
+	<%= f.label 'Titel', class: "control-label", for: "inputTitle" %>
+	<div class="controls">
+		<%= f.text_field :title, id: "inputTitle", placeholder: "Jobbtitel" %>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:title].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group">
+	<%= f.label 'Typ', class: "control-label", for: "inputType" %>
+	<div class="controls">
+
+		<%= f.select :type, valid_types, id: "inputType" %>
+		
+		<span class="help-inline error-inline">
+			<%= @job.errors[:type].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group">
+	<%= f.label 'Ort', class: "control-label", for: "inputCity" %>
+	<div class="controls">
+		<%= f.text_field :city, id: "inputCity", placeholder: "Ort" %>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:city].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group inline-form">
+	<%= f.label 'Sista anmälningsdag', class: "control-label", for: "inputDate" %>
+	<div class="controls">
+		<div class="inline-form">
+			<%= f.date_select :last_day, order: [:day, :month, :year], start_year: 2013,  id: "inputDate" %>
+		</div>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:last_day].first %>
+		</span>
+	</div>
+</div>
+
+<div class="control-group inline-form">
+	<%= f.label 'Beskrivning', class: "control-label", for: "inputDescription" %>
+	<div class="controls">
+		<%= f.text_area :description, id: "inputDescription", placeholder: "En beskrivning av tjänsten", maxlength: 500 %>
+		<div id="counter" class="counter">500</div>
+		<span class="help-inline error-inline">
+			<%= @job.errors[:description].first %>
+		</span>
+	</div>
+</div>

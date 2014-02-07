@@ -50,6 +50,8 @@ GEM
       json (>= 1.7)
     childprocess (0.4.0)
       ffi (~> 1.0, >= 1.0.11)
+    cities (0.2.0)
+      multi_json (~> 1.8.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -186,10 +188,11 @@ DEPENDENCIES
   active_link_to
   bcrypt-ruby (= 3.1.2)
   better_errors
-  bootstrap-sass (= 2.3.2.0)
+  bootstrap-sass
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   carrierwave
+  cities
   coffee-rails (= 4.0.1)
   email_validator
   factory_girl_rails (= 4.2.1)
