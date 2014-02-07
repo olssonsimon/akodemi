@@ -12,7 +12,7 @@
 
 #hero {
 	margin-top: -20px;
-	background: white;
+	background: 0;
 }
 
 /* Form */
@@ -64,6 +64,7 @@ html {
 
 body {
 	padding-top: 60px;
+	background-color: #E3E3E3;
 }
 
 section {
@@ -156,7 +157,7 @@ aside {
 
 .in {
 	padding: 5px;
-	background: #f1f1f1;
+	background: white;
 	width: 100%;
 	border-radius: 3px;
 	border: 1px solid transparent;
@@ -167,6 +168,13 @@ aside {
 
 .out {
 	border: 1px solid $grayLight;
+}
+
+table tr.clickable-row {
+	cursor: pointer;
+	&:hover {
+		background-color: #eee;
+	}
 }
 
 table td {

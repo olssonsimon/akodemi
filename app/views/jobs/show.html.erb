@@ -1,0 +1,13 @@
+<% provide(:title, @job.title) %>
+
+<h1><%= @job.title %></h1>
+
+<div class="row span6 offset3">
+	<h3>Typ</h3><%= @job.type %>
+	<h3>Ort</h3><%= @job.city %>
+	<h3>Sista ansökningsdag</h3><%= @job.last_day %>
+	<h3>Beskrivning</h3>
+	<p><%= @job.description %></p>
+
+	<%= button_to "Sök jobbet!", '#', class: "btn btn-primary", style: "float: right;" %>
+</div>
