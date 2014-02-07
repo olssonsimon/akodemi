@@ -35,6 +35,11 @@
 
 /* Form */
 
+.counter {
+	float: right;
+	margin-right: -12px;
+}
+
 div.inline-form select {
 	display: inline;
 	width: auto;

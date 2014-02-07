@@ -12,6 +12,15 @@ class JobsController < ApplicationController
 	end
 
 	def create
+		@job = Job.new(job_params)
+		if @job.save
+			# successfully created job
+			flash[:success] = "Jobbet: #{@job.title}, har skapats!"
+			redirect_to jobs_path
+		else
+			# error creating job
+			render 'new'
+		end
 	end
 
 	def edit
@@ -19,5 +28,11 @@ class JobsController < ApplicationController
 
 	def destroy
 	end
+
+	private
+
+		def job_params
+			params.require(:job).permit(:title, :description, :city, :last_day, :type)
+		end
 
 end

@@ -11,10 +11,9 @@
 <div class="control-group">
 	<%= f.label 'Typ', class: "control-label", for: "inputType" %>
 	<div class="controls">
-		<%= f.check_box :type, value: "Extrajobb" %><label class="checkbox inline">Extrajobb</label></br>
-		<%= f.check_box :type, value: "Sommarjobb" %><label class="checkbox inline">Sommarjobb</label></br>
-		<%= f.check_box :type, value: "Heltid" %><label class="checkbox inline">Heltid</label></br>
-		<%= f.check_box :type, value: "Deltid" %><label class="checkbox inline">Deltid</label>
+
+		<%= f.select :type, valid_types, id: "inputType" %>
+		
 		<span class="help-inline error-inline">
 			<%= @job.errors[:type].first %>
 		</span>
@@ -26,7 +25,7 @@
 	<div class="controls">
 		<%= f.text_field :city, id: "inputCity", placeholder: "Ort" %>
 		<span class="help-inline error-inline">
-			<%= @job.errors[:ort].first %>
+			<%= @job.errors[:city].first %>
 		</span>
 	</div>
 </div>
@@ -38,7 +37,7 @@
 			<%= f.date_select :last_day, order: [:day, :month, :year], start_year: 2013,  id: "inputDate" %>
 		</div>
 		<span class="help-inline error-inline">
-			<%= @job.errors[:date].first %>
+			<%= @job.errors[:last_day].first %>
 		</span>
 	</div>
 </div>
@@ -46,9 +45,8 @@
 <div class="control-group inline-form">
 	<%= f.label 'Beskrivning', class: "control-label", for: "inputDescription" %>
 	<div class="controls">
-		<div class="inline-form">
-			<%= f.text_area :description, id: "inputDescription" %>
-		</div>
+		<%= f.text_area :description, id: "inputDescription", placeholder: "En beskrivning av tjänsten", maxlength: 500 %>
+		<div id="counter" class="counter">500</div>
 		<span class="help-inline error-inline">
 			<%= @job.errors[:description].first %>
 		</span>
